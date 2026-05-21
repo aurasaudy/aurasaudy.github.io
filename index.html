@@ -20,17 +20,13 @@
         --card-bg: rgba(255, 255, 255, 0.06);
       }
 
-      *,
-      *::before,
-      *::after {
+      *, *::before, *::after {
         box-sizing: border-box;
         margin: 0;
         padding: 0;
       }
 
-      html {
-        scroll-behavior: smooth;
-      }
+      html { scroll-behavior: smooth; }
 
       body {
         font-family: "DM Sans", sans-serif;
@@ -39,7 +35,6 @@
         overflow-x: hidden;
       }
 
-      /* ── NOISE OVERLAY ── */
       body::before {
         content: "";
         position: fixed;
@@ -50,12 +45,9 @@
         opacity: 0.5;
       }
 
-      /* ── NAV ── */
       nav {
         position: fixed;
-        top: 0;
-        left: 0;
-        right: 0;
+        top: 0; left: 0; right: 0;
         z-index: 100;
         display: flex;
         align-items: center;
@@ -73,11 +65,7 @@
         color: var(--accent);
       }
 
-      .nav-links {
-        display: flex;
-        gap: 2rem;
-        list-style: none;
-      }
+      .nav-links { display: flex; gap: 2rem; list-style: none; }
       .nav-links a {
         color: var(--gray);
         text-decoration: none;
@@ -87,11 +75,8 @@
         text-transform: uppercase;
         transition: color 0.2s;
       }
-      .nav-links a:hover {
-        color: var(--accent);
-      }
+      .nav-links a:hover { color: var(--accent); }
 
-      /* ── HERO ── */
       #hero {
         min-height: 100vh;
         display: flex;
@@ -108,59 +93,22 @@
         pointer-events: none;
       }
       .hero-bg-circle.c1 {
-        width: 520px;
-        height: 520px;
-        background: radial-gradient(
-          circle,
-          rgba(30, 86, 160, 0.45),
-          transparent 70%
-        );
-        top: -100px;
-        right: -80px;
+        width: 520px; height: 520px;
+        background: radial-gradient(circle, rgba(30,86,160,0.45), transparent 70%);
+        top: -100px; right: -80px;
         animation: floatA 9s ease-in-out infinite alternate;
       }
       .hero-bg-circle.c2 {
-        width: 340px;
-        height: 340px;
-        background: radial-gradient(
-          circle,
-          rgba(79, 141, 230, 0.3),
-          transparent 70%
-        );
-        bottom: 60px;
-        left: 10vw;
+        width: 340px; height: 340px;
+        background: radial-gradient(circle, rgba(79,141,230,0.3), transparent 70%);
+        bottom: 60px; left: 10vw;
         animation: floatB 11s ease-in-out infinite alternate;
       }
 
-      @keyframes floatA {
-        from { transform: translate(0, 0); }
-        to { transform: translate(30px, 40px); }
-      }
-      @keyframes floatB {
-        from { transform: translate(0, 0); }
-        to { transform: translate(-20px, 30px); }
-      }
+      @keyframes floatA { from { transform: translate(0,0); } to { transform: translate(30px,40px); } }
+      @keyframes floatB { from { transform: translate(0,0); } to { transform: translate(-20px,30px); } }
 
-      .hero-content {
-        position: relative;
-        z-index: 2;
-        max-width: 700px;
-      }
-
-      .hero-tag {
-        display: inline-block;
-        font-size: 0.78rem;
-        font-weight: 500;
-        letter-spacing: 0.15em;
-        text-transform: uppercase;
-        color: var(--accent);
-        background: rgba(96, 180, 255, 0.1);
-        border: 1px solid rgba(96, 180, 255, 0.25);
-        padding: 0.35rem 1rem;
-        border-radius: 999px;
-        margin-bottom: 1.6rem;
-        animation: fadeUp 0.7s ease both;
-      }
+      .hero-content { position: relative; z-index: 2; max-width: 700px; }
 
       h1 {
         font-family: "Playfair Display", serif;
@@ -170,10 +118,7 @@
         margin-bottom: 1.4rem;
         animation: fadeUp 0.7s 0.15s ease both;
       }
-
-      h1 span {
-        color: var(--accent);
-      }
+      h1 span { color: var(--accent); }
 
       .hero-desc {
         font-size: 1.05rem;
@@ -208,21 +153,21 @@
         background: var(--blue-main);
         color: #fff;
         border: 1.5px solid var(--blue-light);
-        box-shadow: 0 0 24px rgba(30, 86, 160, 0.4);
+        box-shadow: 0 0 24px rgba(30,86,160,0.4);
       }
       .btn-primary:hover {
         background: var(--blue-light);
-        box-shadow: 0 0 36px rgba(79, 141, 230, 0.5);
+        box-shadow: 0 0 36px rgba(79,141,230,0.5);
         transform: translateY(-2px);
       }
 
       .btn-outline {
         background: transparent;
         color: var(--accent);
-        border: 1.5px solid rgba(96, 180, 255, 0.4);
+        border: 1.5px solid rgba(96,180,255,0.4);
       }
       .btn-outline:hover {
-        background: rgba(96, 180, 255, 0.1);
+        background: rgba(96,180,255,0.1);
         transform: translateY(-2px);
       }
 
@@ -231,7 +176,6 @@
         to { opacity: 1; transform: translateY(0); }
       }
 
-      /* ── SECTION BASE ── */
       section {
         padding: 7rem 6vw;
         position: relative;
@@ -257,15 +201,10 @@
       .divider {
         width: 100%;
         height: 1px;
-        background: linear-gradient(
-          90deg,
-          transparent,
-          rgba(96, 180, 255, 0.25),
-          transparent
-        );
+        background: linear-gradient(90deg, transparent, rgba(96,180,255,0.25), transparent);
       }
 
-      /* ── ABOUT ── */
+      /* ABOUT */
       #about .about-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -273,9 +212,7 @@
         align-items: center;
       }
 
-      .about-photo-wrap {
-        position: relative;
-      }
+      .about-photo-wrap { position: relative; }
 
       .about-photo-frame {
         width: 100%;
@@ -283,7 +220,7 @@
         aspect-ratio: 3/4;
         border-radius: 16px;
         background: linear-gradient(135deg, var(--blue-mid), var(--blue-dark));
-        border: 1.5px solid rgba(96, 180, 255, 0.2);
+        border: 1.5px solid rgba(96,180,255,0.2);
         display: flex;
         align-items: flex-start;
         justify-content: center;
@@ -296,19 +233,6 @@
         height: 100%;
         object-fit: cover;
         object-position: center -10px;
-      }
-
-      .about-badge {
-        position: absolute;
-        bottom: -16px;
-        right: -16px;
-        background: var(--blue-main);
-        border: 2px solid var(--blue-light);
-        border-radius: 12px;
-        padding: 0.8rem 1.2rem;
-        font-size: 0.82rem;
-        font-weight: 500;
-        box-shadow: 0 8px 32px rgba(30, 86, 160, 0.5);
       }
 
       .about-text p {
@@ -325,26 +249,17 @@
         margin-top: 2rem;
       }
 
-      .info-item {
-        display: flex;
-        flex-direction: column;
-        gap: 0.2rem;
-      }
+      .info-item { display: flex; flex-direction: column; gap: 0.2rem; }
       .info-item .label {
         font-size: 0.75rem;
         color: var(--accent);
         text-transform: uppercase;
         letter-spacing: 0.1em;
       }
-      .info-item .value {
-        font-size: 0.93rem;
-        color: var(--white);
-      }
+      .info-item .value { font-size: 0.93rem; color: var(--white); }
 
-      /* ── SKILLS ── */
-      #skills {
-        background: rgba(255, 255, 255, 0.015);
-      }
+      /* SKILLS */
+      #skills { background: rgba(255,255,255,0.015); }
 
       .skills-grid {
         display: grid;
@@ -354,7 +269,7 @@
 
       .skill-card {
         background: var(--card-bg);
-        border: 1px solid rgba(96, 180, 255, 0.12);
+        border: 1px solid rgba(96,180,255,0.12);
         border-radius: 14px;
         padding: 1.6rem;
         transition: all 0.3s;
@@ -365,37 +280,22 @@
       .skill-card::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
+        top: 0; left: 0; right: 0;
         height: 2px;
         background: linear-gradient(90deg, transparent, var(--accent), transparent);
         transform: scaleX(0);
         transition: transform 0.4s;
       }
 
-      .skill-card:hover {
-        border-color: rgba(96, 180, 255, 0.35);
-        transform: translateY(-4px);
-      }
-      .skill-card:hover::before {
-        transform: scaleX(1);
-      }
+      .skill-card:hover { border-color: rgba(96,180,255,0.35); transform: translateY(-4px); }
+      .skill-card:hover::before { transform: scaleX(1); }
 
-      .skill-icon {
-        font-size: 2rem;
-        margin-bottom: 1rem;
-      }
-
-      .skill-name {
-        font-weight: 600;
-        margin-bottom: 0.5rem;
-        font-size: 0.97rem;
-      }
+      .skill-icon { font-size: 2rem; margin-bottom: 1rem; }
+      .skill-name { font-weight: 600; margin-bottom: 0.5rem; font-size: 0.97rem; }
 
       .skill-bar-bg {
         height: 4px;
-        background: rgba(255, 255, 255, 0.08);
+        background: rgba(255,255,255,0.08);
         border-radius: 99px;
         margin-top: 0.8rem;
         overflow: hidden;
@@ -409,15 +309,11 @@
         animation-play-state: paused;
       }
 
-      .skill-card.visible .skill-bar-fill {
-        animation-play-state: running;
-      }
+      .skill-card.visible .skill-bar-fill { animation-play-state: running; }
 
-      @keyframes barGrow {
-        from { width: 0 !important; }
-      }
+      @keyframes barGrow { from { width: 0 !important; } }
 
-      /* ── PROJECTS ── */
+      /* PROJECTS */
       .projects-grid {
         display: grid;
         grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -426,7 +322,7 @@
 
       .project-card {
         background: var(--card-bg);
-        border: 1px solid rgba(96, 180, 255, 0.12);
+        border: 1px solid rgba(96,180,255,0.12);
         border-radius: 16px;
         overflow: hidden;
         transition: all 0.3s;
@@ -436,27 +332,38 @@
 
       .project-card:hover {
         transform: translateY(-6px);
-        border-color: rgba(96, 180, 255, 0.3);
-        box-shadow: 0 16px 48px rgba(10, 22, 40, 0.5);
+        border-color: rgba(96,180,255,0.3);
+        box-shadow: 0 16px 48px rgba(10,22,40,0.5);
       }
 
       .project-thumb {
         height: 180px;
         background: linear-gradient(135deg, var(--blue-mid), var(--blue-main));
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-size: 3rem;
         position: relative;
         overflow: hidden;
         flex-shrink: 0;
+      }
+
+      /* ── FOTO PROJECT ── */
+      .project-thumb img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+
+      .project-card:hover .project-thumb img {
+        transform: scale(1.05);
       }
 
       .project-thumb::after {
         content: "";
         position: absolute;
         inset: 0;
-        background: linear-gradient(to bottom, transparent 50%, rgba(10, 22, 40, 0.8));
+        background: linear-gradient(to bottom, transparent 40%, rgba(10,22,40,0.75));
+        pointer-events: none;
       }
 
       .project-body {
@@ -473,11 +380,9 @@
         color: var(--accent);
         margin-bottom: 0.5rem;
       }
-      .project-title {
-        font-weight: 700;
-        font-size: 1.05rem;
-        margin-bottom: 0.6rem;
-      }
+
+      .project-title { font-weight: 700; font-size: 1.05rem; margin-bottom: 0.6rem; }
+
       .project-desc {
         font-size: 0.88rem;
         color: var(--gray);
@@ -485,7 +390,7 @@
         flex: 1;
       }
 
-      /* ── GITHUB BUTTON ── */
+      /* GITHUB BUTTON */
       .btn-github {
         display: inline-flex;
         align-items: center;
@@ -494,7 +399,7 @@
         padding: 0.55rem 1.1rem;
         background-color: transparent;
         color: var(--white);
-        border: 1px solid rgba(96, 180, 255, 0.3);
+        border: 1px solid rgba(96,180,255,0.3);
         border-radius: 7px;
         font-size: 0.82rem;
         font-weight: 500;
@@ -503,21 +408,16 @@
         align-self: flex-start;
       }
 
-      .btn-github svg {
-        flex-shrink: 0;
-        color: var(--accent);
-      }
+      .btn-github svg { flex-shrink: 0; color: var(--accent); }
 
       .btn-github:hover {
-        background-color: rgba(96, 180, 255, 0.1);
-        border-color: rgba(96, 180, 255, 0.55);
+        background-color: rgba(96,180,255,0.1);
+        border-color: rgba(96,180,255,0.55);
         transform: translateY(-2px);
       }
 
-      /* ── CONTACT ── */
-      #contact {
-        text-align: center;
-      }
+      /* CONTACT */
+      #contact { text-align: center; }
 
       .contact-links {
         display: flex;
@@ -534,7 +434,7 @@
         padding: 0.9rem 1.6rem;
         border-radius: 10px;
         background: var(--card-bg);
-        border: 1px solid rgba(96, 180, 255, 0.15);
+        border: 1px solid rgba(96,180,255,0.15);
         color: var(--white);
         text-decoration: none;
         font-size: 0.9rem;
@@ -542,52 +442,34 @@
       }
 
       .contact-link:hover {
-        background: rgba(96, 180, 255, 0.12);
-        border-color: rgba(96, 180, 255, 0.4);
+        background: rgba(96,180,255,0.12);
+        border-color: rgba(96,180,255,0.4);
         transform: translateY(-3px);
       }
 
-      .contact-link svg {
-        color: var(--accent);
-      }
+      .contact-link svg { color: var(--accent); }
 
-      /* ── FOOTER ── */
       footer {
         text-align: center;
         padding: 2rem 6vw;
-        border-top: 1px solid rgba(96, 180, 255, 0.08);
+        border-top: 1px solid rgba(96,180,255,0.08);
         color: var(--gray);
         font-size: 0.82rem;
       }
 
-      /* ── RESPONSIVE ── */
       @media (max-width: 700px) {
-        nav {
-          padding: 1rem 4vw;
-        }
-        .nav-links {
-          gap: 1.2rem;
-        }
-        .nav-links a {
-          font-size: 0.78rem;
-        }
-        section {
-          padding: 5rem 5vw;
-        }
-        #about .about-grid {
-          grid-template-columns: 1fr;
-        }
-        .about-photo-frame {
-          max-width: 220px;
-          margin: 0 auto;
-        }
-        .about-info {
-          grid-template-columns: 1fr;
-        }
+        nav { padding: 1rem 4vw; }
+        .nav-links { gap: 1.2rem; }
+        .nav-links a { font-size: 0.78rem; }
+        section { padding: 5rem 5vw; }
+        #about .about-grid { grid-template-columns: 1fr; }
+        .about-photo-frame { max-width: 220px; margin: 0 auto; }
+        .about-info { grid-template-columns: 1fr; }
       }
     </style>
   </head>
   <body>
+
     <!-- NAV -->
     <nav>
       <div class="nav-logo">Portofolio</div>
@@ -610,7 +492,7 @@
           Saya siswi RPL SMK PGRI Wlingi yang memiliki ambisi besar dan selalu berusaha keras memberikan hasil terbaik.
         </p>
         <div class="hero-btns">
-          <a href="cv.pdf" target="_blank" class="btn btn-primary">
+          <a href="CV_IrmaAura.pdf" target="_blank" class="btn btn-primary">
             <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
               <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
               <polyline points="14 2 14 8 20 8"/>
@@ -681,32 +563,20 @@
         <div class="skill-card">
           <div class="skill-icon">🌐</div>
           <div class="skill-name">HTML & CSS</div>
-          <div style="font-size: 0.82rem; color: var(--gray)">
-            Membangun tampilan website yang rapi dan responsif
-          </div>
-          <div class="skill-bar-bg">
-            <div class="skill-bar-fill" style="width: 85%"></div>
-          </div>
+          <div style="font-size: 0.82rem; color: var(--gray)">Membangun tampilan website yang rapi dan responsif</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🐘</div>
           <div class="skill-name">PHP & MySQL</div>
-          <div style="font-size: 0.82rem; color: var(--gray)">
-            Pengembangan aplikasi web berbasis server
-          </div>
-          <div class="skill-bar-bg">
-            <div class="skill-bar-fill" style="width: 70%"></div>
-          </div>
+          <div style="font-size: 0.82rem; color: var(--gray)">Pengembangan aplikasi web berbasis server</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 70%"></div></div>
         </div>
         <div class="skill-card">
           <div class="skill-icon">🎨</div>
           <div class="skill-name">UI/UX Design</div>
-          <div style="font-size: 0.82rem; color: var(--gray)">
-            Merancang tampilan yang menarik dan user-friendly
-          </div>
-          <div class="skill-bar-bg">
-            <div class="skill-bar-fill" style="width: 85%"></div>
-          </div>
+          <div style="font-size: 0.82rem; color: var(--gray)">Merancang tampilan yang menarik dan user-friendly</div>
+          <div class="skill-bar-bg"><div class="skill-bar-fill" style="width: 85%"></div></div>
         </div>
       </div>
     </section>
@@ -720,51 +590,57 @@
       <div class="projects-grid">
 
         <div class="project-card">
-          <div class="project-thumb">🛒</div>
-          <div class="project-body">
-            <div class="project-tag">Web App</div>
-            <div class="project-title">Toko Online Sederhana</div>
-            <p class="project-desc">
-              Website e-commerce sederhana dengan fitur katalog produk,
-              keranjang belanja, dan manajemen pesanan menggunakan PHP & MySQL.
-            </p>
-            <a href="https://github.com/username/toko-online" target="_blank" rel="noopener noreferrer" class="btn-github">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg>
-              View on GitHub
-            </a>
+          <div class="project-thumb">
+            <img src="kalkulator-bangun-ruang.jpg" alt="Kalkulator Bangun Ruang" />
           </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">📚</div>
-          <div class="project-body">
-            <div class="project-tag">Web App</div>
-            <div class="project-title">Sistem Perpustakaan</div>
-            <p class="project-desc">
-              Aplikasi manajemen perpustakaan untuk pencatatan peminjaman dan
-              pengembalian buku dengan antarmuka yang mudah digunakan.
-            </p>
-            <a href="https://github.com/username/sistem-perpustakaan" target="_blank" rel="noopener noreferrer" class="btn-github">
-              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
-                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
-              </svg>
-              View on GitHub
-            </a>
-          </div>
-        </div>
-
-        <div class="project-card">
-          <div class="project-thumb">📝</div>
           <div class="project-body">
             <div class="project-tag">Website</div>
-            <div class="project-title">Landing Page Profil Sekolah</div>
+            <div class="project-title">Kalkulator Bangun Ruang</div>
             <p class="project-desc">
-              Halaman profil sekolah yang responsif dengan informasi lengkap,
-              galeri foto, dan formulir pendaftaran siswa baru.
+              Website yang digunakan untuk menghitung Bangun Ruang dengan cepat,
+              yang dibangun menggunakan HTML, PHP, JavaScript, dan Bootstrap.
             </p>
-            <a href="https://github.com/username/landing-page-sekolah" target="_blank" rel="noopener noreferrer" class="btn-github">
+            <a href="https://github.com/aurasaudy/kalkulator-bangun-ruang" target="_blank" rel="noopener noreferrer" class="btn-github">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="aplikasi-jasaku.jpg" alt="Aplikasi Jasaku" />
+          </div>
+          <div class="project-body">
+            <div class="project-tag">Web App</div>
+            <div class="project-title">Aplikasi Jasaku</div>
+            <p class="project-desc">
+              Aplikasi penyedia layanan Jasa yang dapat digunakan dengan mudah,
+              yang dibangun menggunakan Laravel, Bootstrap, dan MySQL.
+            </p>
+            <a href="https://github.com/aurasaudy/aplikasi-jasaku" target="_blank" rel="noopener noreferrer" class="btn-github">
+              <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
+              </svg>
+              View on GitHub
+            </a>
+          </div>
+        </div>
+
+        <div class="project-card">
+          <div class="project-thumb">
+            <img src="aplikasi-simmas.jpg" alt="Aplikasi SIMMAS" />
+          </div>
+          <div class="project-body">
+            <div class="project-tag">Web App</div>
+            <div class="project-title">Aplikasi SIMMAS</div>
+            <p class="project-desc">
+              Aplikasi yang digunakan mengelola Program Magang Lebih Cerdas,
+              yang dibangun manggunakan Next.js, Shadcn/ui, dan Supabase.
+            </p>
+            <a href="https://github.com/aurasaudy/aplikasi-simmas" target="_blank" rel="noopener noreferrer" class="btn-github">
               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" fill="currentColor" viewBox="0 0 16 16">
                 <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"/>
               </svg>
@@ -801,7 +677,7 @@
           </svg>
           @irm.mcca
         </a>
-        <a href="cv.pdf" target="_blank" class="contact-link">
+        <a href="CV_IrmaAura.pdf" download="CV_IrmaAura.pdf" class="contact-link">
           <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
             <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
             <polyline points="14 2 14 8 20 8"/>
@@ -816,7 +692,6 @@
       <p>© 2026 Irma Aura Saudya Mecca</p>
     </footer>
 
-    <!-- SCROLL ANIMATION FOR SKILL BARS -->
     <script>
       const skillCards = document.querySelectorAll(".skill-card");
       const observer = new IntersectionObserver(
